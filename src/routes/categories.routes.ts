@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { v4 as uuidv4 } from "uuid";
 
 import { Category } from "../model/Category";
 
@@ -24,5 +23,3 @@ categoriesRoutes.post("/", (request, response) => {
 });
 
 export { categoriesRoutes };
-
-
