@@ -1,8 +1,27 @@
-import { ICreateSpecificationDTO, ISpecificationsRetository } from "./ISpecificationsRepository";
+import { Specification } from "../model/Specification";
+import { 
+  ICreateSpecificationDTO, 
+  ISpecificationsRetository 
+} from "./ISpecificationsRepository";
 
 class SpecificationsRepository implements ISpecificationsRetository {
-  create({ name, description }: ICreateSpecificationDTO): void {
-    throw new Error("Method not implemented.");
+  private specifications: Specification[];
+
+  constructor() {
+    this.specifications = [];
   }
 
+  create({ name, description }: ICreateSpecificationDTO): void {
+    const specification = new Specification();
+
+    Object.assign(specification, {
+      name,
+      description,
+      created_at: new Date(),
+    });
+
+    this.specifications.push(specification);
+  }
 }
+
+export { SpecificationsRepository }
