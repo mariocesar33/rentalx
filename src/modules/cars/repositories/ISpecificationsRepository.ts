@@ -4,5 +4,7 @@ interface ICreateSpecificationDTO {
 }
 
 interface ISpecificationsRetository {
-  create() 
+  create({ name, description}: ICreateSpecificationDTO): void;
 }
+
+export { ICreateSpecificationDTO, ISpecificationsRetository }
