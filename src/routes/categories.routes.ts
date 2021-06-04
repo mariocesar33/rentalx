@@ -19,7 +19,9 @@ categoriesRoutes.get("/", (request, response) => {
 });
 
 categoriesRoutes.post("/import", upload.single("file"), (request, response) => {
-  
+  const { file } = request;
+  console.log(file);
+
   return response.send();
 });
 
