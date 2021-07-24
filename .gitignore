@@ -8,9 +8,8 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# docker
+docker-compose.yml
 
 # production
 /build
