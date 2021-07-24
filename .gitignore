@@ -9,7 +9,7 @@
 /coverage
 
 # docker
-docker-compose.yml
+docker-compose.yml*
 
 # production
 /build
