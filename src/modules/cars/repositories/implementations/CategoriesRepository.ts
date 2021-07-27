@@ -10,7 +10,7 @@ class CategoriesRepository implements ICategoriesRepository {
 
   private repository: Repository<Category>
 
-  constructor () {
+  constructor() {
     this.repository = getRepository(Category)
   }
 
