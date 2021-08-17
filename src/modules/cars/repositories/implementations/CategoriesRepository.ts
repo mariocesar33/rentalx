@@ -11,7 +11,7 @@ class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>
 
   constructor() {
-    this.repository = getRepository(Category)
+    this.repository = getRepository(Category);
   }
 
   async create({ name, description}: ICreateCategoryDTO): Promise<void> {
@@ -20,7 +20,7 @@ class CategoriesRepository implements ICategoriesRepository {
       name,
     });
 
-    await this.repository.save(category)
+    await this.repository.save(category);
   }
 
   async list(): Promise<Category[]> {
