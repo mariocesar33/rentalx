@@ -7,4 +7,4 @@ import { CategoriesRepository } from "../../modules/cars/repositories/implementa
 container.registerSingleton<ICategoriesRepository>(
   "CategoriesRepository",
   CategoriesRepository
-)
+);
