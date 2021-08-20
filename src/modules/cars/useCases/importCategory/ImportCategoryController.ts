@@ -5,12 +5,12 @@ import { ImportCategoryUseCase } from "./ImportCategoryUseCase";
 
 class ImportCategoryController {
 
-  hundle(request: Request, response: Response): Response {
+  async hundle(request: Request, response: Response): Promise<Response> {
     const { file } = request;
 
     const importCategoryUseCase = container.resolve(ImportCategoryUseCase);
 
-    importCategoryUseCase.execute(file);
+    await importCategoryUseCase.execute(file);
 
     return response.send()
   }
